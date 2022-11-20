@@ -1,31 +1,125 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DataSelector">
-
-    <EditText
-        android:id="@+id/sportClub"
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/sport_name"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="Select a new Profile Picture"
+        android:layout_marginTop="8pt"
+        android:textSize="7pt"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/canada"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <ImageButton
+        android:layout_width="51pt"
+        android:layout_height="51pt"
+        android:id="@+id/korea"
+        android:src="@drawable/flag_kr"
+        android:scaleType="fitXY"
+        android:layout_marginTop="36pt"
+        android:backgroundTint="#CCCCCC"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/canada"
+
+        />
+    <ImageButton
+        android:layout_width="51pt"
+        android:layout_height="51pt"
+        android:id="@+id/canada"
+        android:src="@drawable/flag_ca"
+        android:scaleType="fitXY"
+        android:layout_marginTop="36pt"
+        android:backgroundTint="#CCCCCC"
+        app:layout_constraintLeft_toRightOf="@id/korea"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/japan"
+        app:layout_constraintRight_toLeftOf="@id/egypt"
+        />
+
+    <ImageButton
+        android:id="@+id/egypt"
+        android:layout_width="51pt"
+        android:layout_height="51pt"
+        android:layout_marginTop="36pt"
+        android:backgroundTint="#CCCCCC"
+        android:scaleType="fitXY"
+        android:src="@drawable/flag_eg"
+        app:layout_constraintLeft_toRightOf="@id/canada"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <ImageButton
+        android:id="@+id/france"
+        android:layout_width="51pt"
+        android:layout_height="51pt"
+        android:backgroundTint="#CCCCCC"
+        android:layout_marginTop="2pt"
+        android:scaleType="fitXY"
+        android:src="@drawable/flag_fr"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/japan"
+        app:layout_constraintTop_toBottomOf="@id/korea" />
+    <ImageButton
+        android:id="@+id/japan"
+        android:layout_width="51pt"
+        android:layout_height="51pt"
+        android:backgroundTint="#CCCCCC"
+        android:layout_marginTop="2pt"
+        android:scaleType="fitXY"
+        android:src="@drawable/flag_jp"
+        app:layout_constraintLeft_toRightOf="@id/france"
+        app:layout_constraintTop_toBottomOf="@id/canada"
+        app:layout_constraintRight_toLeftOf="@id/spain"/>
+    <ImageButton
+        android:id="@+id/turkey"
+        android:layout_width="51pt"
+        android:layout_height="51pt"
+        android:backgroundTint="#CCCCCC"
+        android:layout_marginTop="2pt"
+        android:scaleType="fitXY"
+        android:src="@drawable/flag_tr"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/britain"
+        app:layout_constraintTop_toBottomOf="@id/france"
 
-    <Button
-        android:id="@+id/submitBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="@string/submit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sportClub" />
+        />
+    <ImageButton
+        android:id="@+id/spain"
+        android:layout_width="51pt"
+        android:layout_height="51pt"
+        android:backgroundTint="#CCCCCC"
+        android:layout_marginTop="2pt"
+        android:scaleType="fitXY"
+        android:src="@drawable/flag_sp"
+        app:layout_constraintTop_toBottomOf="@id/egypt"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/japan"/>
+    <ImageButton
+        android:id="@+id/britain"
+        android:layout_width="51pt"
+        android:layout_height="51pt"
+        android:backgroundTint="#CCCCCC"
+        android:layout_marginTop="2pt"
+        android:scaleType="fitXY"
+        android:src="@drawable/flag_uk"
+        app:layout_constraintTop_toBottomOf="@id/japan"
+        app:layout_constraintLeft_toRightOf="@id/turkey"
+        app:layout_constraintRight_toLeftOf="@id/america"
+        />
+    <ImageButton
+        android:id="@+id/america"
+        android:layout_width="51pt"
+        android:layout_height="51pt"
+        android:backgroundTint="#CCCCCC"
+        android:layout_marginTop="2pt"
+        android:scaleType="fitXY"
+        android:src="@drawable/flag_us"
+        app:layout_constraintLeft_toRightOf="@id/britain"
+        app:layout_constraintTop_toBottomOf="@id/spain"
+        app:layout_constraintRight_toRightOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

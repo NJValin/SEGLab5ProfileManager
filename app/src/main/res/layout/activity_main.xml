@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,28 +7,93 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/displayTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.132" />
+    <androidx.constraintlayout.utils.widget.ImageFilterButton
+        android:id="@+id/flagBtn"
+        android:layout_width="85pt"
+        android:layout_height="85pt"
+        android:layout_marginTop="16pt"
+        android:scaleType="fitXY"
+        android:src="@drawable/flag_ca"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sports Team Manager"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+
+        android:textSize="15pt"
+        app:layout_constraintTop_toBottomOf="@+id/flagBtn" />
+
+    <EditText
+        android:id="@+id/teamNameBox"
+        android:layout_width="100pt"
+        android:layout_height="20pt"
+        android:hint="Enter a team name"
+        android:maxLines="1"
+        android:textColorHint="@color/black"
+        android:backgroundTint="#424242"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_marginTop="10pt"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        android:id="@+id/teamnamedisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Team Name"
+        android:textAlignment="center"
+        android:textSize="6pt"
+        app:layout_constraintTop_toBottomOf="@id/teamNameBox"
+        />
+    <EditText
+        android:id="@+id/postalCodebox"
+        android:layout_width="100pt"
+        android:layout_height="20pt"
+        android:hint="Enter a postal code"
+        android:textColorHint="@color/black"
+        android:maxLines="1"
+        android:backgroundTint="#424242"
+        app:layout_constraintTop_toBottomOf="@id/teamnamedisplay"
+        android:layout_marginTop="10pt"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addressdisplay"
+        android:text="Team Address"
+        android:textSize="6pt"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/postalCodebox"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <Button
+        android:layout_width="80pt"
+        android:layout_height="20pt"
+        android:id="@+id/setValues"
+        android:backgroundTint="#03A9F4"
+        android:text="Set Values"
+        android:layout_marginTop="5pt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addressdisplay"
+        />
     <Button
         android:id="@+id/mapsBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="236dp"
+        android:backgroundTint="#03A9F4"
         android:text="@string/google_maps"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/displayTxt"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@id/setValues"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16pt"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
